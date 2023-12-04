@@ -13,6 +13,6 @@
  */
 void dis_prompt(void);
 void tamo(const char *show_m);
-void read_command(char *command, size_t size);
-void execute_command(const char *command);
+void read_in(char *user-in, size_t size);
+void exe_command(const char *user-in);
 #endif /* END */
