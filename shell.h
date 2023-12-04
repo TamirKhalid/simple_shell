@@ -12,7 +12,7 @@
  * Simple_Shell Prototypes
  */
 void dis_prompt(void);
-void leo_print(const char *message);
+void tamo(const char *show_m);
 void read_command(char *command, size_t size);
 void execute_command(const char *command);
 #endif /* END */
