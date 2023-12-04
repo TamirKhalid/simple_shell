@@ -1,8 +1,10 @@
 #include "shell.h"
+
 /*
  * main: This is the main function
- *
+ * user-in: lenght of user input string
  */
+
 int main(void) {
 char user-in[145];
 while (true) {
