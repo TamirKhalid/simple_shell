@@ -1,5 +1,7 @@
-nclude "shell.h"
-
+#include "shell.h"
+/*
+ * read_in: User Command Input
+ */
 void read_in(char *user-in, size_t size) {
 if (fgets(user-in, size, stdin) == NULL) {
 if (feof(stdin)) {
