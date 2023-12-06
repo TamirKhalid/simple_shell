@@ -12,7 +12,7 @@ exit(EXIT_FAILURE);
 
 // Starting the child process
 
-char *argu[130} /Maximum 128 arguments
+char *argu{130}
 int argu_counter=0;
 char *token = strtok((char *)user-in, " ");
 while (token != NULL) {
