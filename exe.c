@@ -14,7 +14,7 @@ exit(EXIT_FAILURE);
  * Starting the child process
  */
 
-char *argu[130]
+char *argu[130];
 int argu_counter=0;
 char *token = strtok((char *)user_in, " ");
 while (token != NULL) {
