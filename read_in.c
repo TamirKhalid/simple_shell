@@ -12,5 +12,5 @@ tamo("Error input.\n");
 exit(EXIT_FAILURE);
 }
 }
-user-in[strcspn(user-in, "\n")] = '\0'; // this code line removes newline
+user_in[strcspn(user_in, "\n")] = '\0'; /* this code line removes newline */
 }
