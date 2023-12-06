@@ -2,8 +2,8 @@
 /*
  * read_in: User Command Input
  */
-void read_in(char *user-in, size_t size) {
-if (fgets(user-in, size, stdin) == NULL) {
+void read_in(char *user_in, size_t size) {
+if (fgets(user_in, size, stdin) == NULL) {
 if (feof(stdin)) {
 tamo("\n");
 exit(EXIT_SUCCESS);

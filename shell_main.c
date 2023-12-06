@@ -6,11 +6,11 @@
  */
 
 int main(void) {
-char user-in[145];
+char user_in[145];
 while (true) {
 dis_prompt();
-read_in(user-in, sizeof(user-in));
-exe_command(user-in);
+read_in(user_in, sizeof(user_in));
+exe_command(user_in);
 }
 return 0;
 }
