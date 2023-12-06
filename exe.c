@@ -3,7 +3,7 @@
  * exe_command : executes the user input
  */
 
-void exe_command(const char *user-in) {
+void exe_command(const char *user_in) {
 pid_t childpid = fork();
 if (childpid == -1) {
 tamo("Error in the forking.\n");
@@ -12,9 +12,9 @@ exit(EXIT_FAILURE);
 
 // Starting the child process
 
-char *argu{130}
+char *argu[130]
 int argu_counter=0;
-char *token = strtok((char *)user-in, " ");
+char *token = strtok((char *)user_in, " ");
 while (token != NULL) {
 argu[argu_counter++] = token;
 token = strtok(NULL, " ");
