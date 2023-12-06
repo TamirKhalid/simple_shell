@@ -23,14 +23,14 @@ token = strtok(NULL, " ");
 }
 argu[argu_counter] = NULL;
 
-/*
- * Null terminates the arguments array
- * Executing the command
-*/
+/* Null terminates the arguments array */
+
+/* Executing the command */
 
  execvp(argu[0], argu);
 
-// If executing fails, print an error
+/* If executing fails, print an error */
+
 tamo("Error executing.\n");
 exit(EXIT_FAILURE);
 } else {
