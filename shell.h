@@ -8,11 +8,15 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdbool.h>
+#include <sys/wait.h>
+
 /*
  * Simple_Shell Prototypes
  */
+
 void dis_prompt(void);
 void tamo(const char *show_m);
-void read_in(char *user-in, size_t size);
-void exe_command(const char *user-in);
+void read_in(char *user_in, size_t size);
+void exe_command(const char *user_in);
+
 #endif /* END */
