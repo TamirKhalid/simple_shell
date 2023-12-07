@@ -7,7 +7,7 @@
 void env_p() {
 extern char **environ;
 char **envo;
-for (char **envo = environ; *envo != NULL; envo++) {
+for (envo = environ; *envo != NULL; envo++) {
 tamo("%s\n", *envo);
 }
 }
