@@ -1,16 +1,22 @@
 #include "shell.h"
 
 /*
- * main: This is the main function
- * user_in: lenght of user input string
- */
+* main:
+* 
+*/
 
-int main(void) {
-char user_in[145];
+int main() {
+char user_in[1024];
 while (true) {
 dis_prompt();
-read_in(user_in,i sizeof(user_in));
+read_in(user_in, sizeof(user_in));
+if (strcmp(user_in, "exit") == 0) {
+exit_h(user_in);
+} else if (strcmp(user_in, "envo") == 0) {
+env_p();
+} else {
 exe_command(user_in);
+}
 }
 return 0;
 }
