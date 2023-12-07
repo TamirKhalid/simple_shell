@@ -18,8 +18,8 @@ exit(EXIT_FAILURE);
 
 /*
  *Starting the child process
-*
-*/
+ *
+ */
 
 char *argu[130];
 int argu_counter = 0;
@@ -28,12 +28,11 @@ while (token != NULL) {
 argu[argu_counter++] = token;
 token = strtok(NULL, " ");
 }
-argu[argu_counter] = NULL; /* Null terminates the arguments array */
-/* Get environment variables */
+argu[argu_counter] = NULL;
 extern char** environ;
-/* Executing the command */
-execve(argu[0], argu, environ); /* Using execve with envir vars */
-tamo("Error executing.\n"); /* If executing fails, print an error */
+argu[0] = path_h(argu, argu[0]);
+execve(argu[0], argu, environ);
+tamo("Error executing.\n");
 exit(EXIT_FAILURE);
 } else {
 wait(NULL);
