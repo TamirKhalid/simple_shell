@@ -1,10 +1,10 @@
 #include "shell.h"
 
-/*
- * path_h - path function handling
- * @arg_value: argument value
- * @user_in: user input 
- * Return: the user input command for execute
+/**
+ *  path_h - path function handling
+ *  @arg_value: argument value
+ *  @user_in: user input 
+ *  Return: the user input command for execute
  */
 
 char *path_h(char **arg_value, char *user_in)
