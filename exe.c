@@ -12,7 +12,7 @@
 void exe_command(const char *user_in) {
 pid_t childpid = fork();
 if (childpid == -1) {
-tamo("Error in forking.\n");
+perror("Error in forking.\n");
 exit(EXIT_FAILURE);
 } else if (childpid == 0) {
 
@@ -32,7 +32,7 @@ argu[argu_counter] = NULL;
 extern char** environ;
 argu[0] = path_h(argu, argu[0]);
 execve(argu[0], argu, environ);
-tamo("Error executing.\n");
+perror("Error executing.\n");
 exit(EXIT_FAILURE);
 } else {
 wait(NULL);
