@@ -1,7 +1,10 @@
 #include "shell.h"
 
 /**
- * 
+ *_strcmp - compares two strings 
+ *@stri : string 1
+ *strii: string 2
+return: string
  */
 
 int _strcmp(char *stri, char *strii)
