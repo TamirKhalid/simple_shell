@@ -30,7 +30,7 @@ argu[argu_counter++] = token;
 token = strtok(NULL, " ");
 }
 argu[argu_counter] = NULL;
-char** environ;
+path_h(argu);
 argu[0] = path_h(argu, argu[0]);
 execve(argu[0], argu, environ);
 perror("Error executing.\n");
