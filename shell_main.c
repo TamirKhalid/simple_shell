@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /*
-* main:
-* 
+* main: main function
+* user_in : user input variable
 */
 
 int main() {
