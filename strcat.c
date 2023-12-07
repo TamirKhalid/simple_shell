@@ -1,7 +1,10 @@
 #include "shell.h"
 
 /**
- * 
+ * _strcat:  attach the sr to des
+ * @des: string destination 
+ * @sr: string source
+ * Return: string
  */
 
 char *_strcat(char *des, char *sr)
