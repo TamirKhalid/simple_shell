@@ -1,7 +1,9 @@
 #include "shell.h"
 
 /**
- * 
+ * _strlen - function to determine the len of string
+ * @str: string var
+ * Return: length 
  */
 
 int _strlen(char *str)
