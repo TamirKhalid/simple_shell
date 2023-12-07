@@ -3,7 +3,7 @@
 /**
  * env_p: prints the current environment.
  */
-void tamstr(const char *format){
+void tamstr(const char *format, const char *str){
     write(STDOUT_FILENO, format, strlen(format));
 }
 void env_p() {
