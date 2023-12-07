@@ -8,6 +8,68 @@
 /*
  *  exe_command: executes the user input
  */
+/**
+ *  * _strcpy: string copy
+ *   * @des: string destination
+ *    * @sr: argument source
+ *     * Return: Vale of the string 
+ *      */
+
+char *_strcpy(char *des, char *sr)
+{
+	int y, len = 0;
+	while (sr[len] != '\0')
+	{
+		len++;
+	}
+	for (y = 0; y < len; y++)
+	{
+		des[y] = sr[y];
+	}
+	des[y] = '\0';
+	return (des);
+}
+/**
+ *  * _strlen - function to determine the len of string
+ *   * @str: string var
+ *    * Return: length 
+ *     */
+
+int _strlen(char *str)
+{
+	int y = 0;
+	while (*(str + y) != '\0')
+	{
+		y++;
+	}
+	return (y);
+}
+/**
+ *  * _strcat:  attach the sr to des
+ *   * @des: string destination 
+ *    * @sr: string source
+ *     * Return: string
+ *      */
+
+char *_strcat(char *des, char *sr)
+{
+	int len = 0, led = 0, z;
+	while (sr[len] != '\0')
+	{
+		len++;
+	}
+	while (des[led] != '\0')
+	{
+		led++;
+	}
+	for (z = 0; z < len; z++)
+	{
+		des[led + z] = sr[z];
+	}
+	des[led + len] = '\0';
+	return (des);
+}
+
 char *path_h(char **arg_value, char *user_in)
 {
 char *p;
