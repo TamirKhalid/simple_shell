@@ -23,13 +23,14 @@ exit(EXIT_FAILURE);
 
 char *argu[130];
 int argu_counter = 0;
+extern char** environ;
 char *token = strtok((char *)user_in, " ");
 while (token != NULL) {
 argu[argu_counter++] = token;
 token = strtok(NULL, " ");
 }
 argu[argu_counter] = NULL;
-extern char** environ;
+char** environ;
 argu[0] = path_h(argu, argu[0]);
 execve(argu[0], argu, environ);
 perror("Error executing.\n");
