@@ -1,24 +1,19 @@
 #include "shell.h"
 
 /**
- * env_p: prints the current environment.
- */
+* env_p:  environment string print 
+*
+*/
 
-void tamstr(int f, const char *form, const char *val) {
-while (*form != '\0') {
-if (*form == '%' && *(form + 1) == 's') {
-write(f, val, strlen(val));
-form += 2;
-} else {
-write(f, form, 1);
-form++;
-}
-}
-}
-void env_p() {
+void env_p(void)
+{
+int x = 0;
 extern char **environ;
-char **envo;
-for (envo = environ; *envo != NULL; envo++) {
-tamstr("%s\n", *envo);
+char **env = environ;
+while (env[x])
+{
+write(STDOUT_FILENO, (const void *)env[x], _strlen(env[x]));
+write(STDOUT_FILENO, "\n", 1);
+x++;
 }
 }
