@@ -25,6 +25,5 @@ char *_strcpy(char *des, char *sr);
 int _strlen(char *str);
 char *_strcat(char *des, char *sr);
 int _strcmp(char *stri, char *strii);
-void tamstr(const char *format, const char *str);
 
 #endif /* END */
