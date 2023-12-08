@@ -1,9 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include <shell.h>
 #include <sys/types.h>
-#include <sys/wait.h>
 
 /*
  *  exe_command: executes the user input
