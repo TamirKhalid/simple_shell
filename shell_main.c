@@ -12,10 +12,8 @@ dis_prompt();
 read_in(user_in, sizeof(user_in));
 if (strcmp(user_in, "exit") == 0) {
 exit_h(user_in);
-}
-} else {
+}else {
 exe_command(user_in);
-}
 }
 return 0;
 }
