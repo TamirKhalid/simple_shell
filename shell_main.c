@@ -12,8 +12,7 @@ dis_prompt();
 read_in(user_in, sizeof(user_in));
 if (strcmp(user_in, "exit") == 0) {
 exit_h(user_in);
-} else if (strcmp(user_in, "env") == 0) {
-env_p(ar, argu, env);
+}
 } else {
 exe_command(user_in);
 }
