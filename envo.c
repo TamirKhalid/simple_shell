@@ -1,7 +1,9 @@
-#include <shell.h> 
+#include "shell.h" 
 
 /*
-*
+*   env_p : prints the current environment
+*   @ar: argument var
+*   @argu: argument
 */
 
 int env_p(int ar, char *argu[], char *env[]) {
