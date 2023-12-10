@@ -1,19 +1,20 @@
-#include "shell.h"
+#include <shell.h> 
 
-/**
-* env_p:  environment string print 
+/*
 *
 */
 
-void env_p(void)
-{
-int x = 0;
-extern char **environ;
-char **env = environ;
-while (env[x])
-{
-write(STDOUT_FILENO, (const void *)env[x], _strlen(env[x]));
-write(STDOUT_FILENO, "\n", 1);
-x++;
+int env_p(int ar, char *argu[], char *env[]) {
+
+z = 0;
+while (env[z] != NULL) {
+int g = 0;
+while (env[z][g] != '\0') {
+g++;
 }
+write(STDOUT_FILENO, env[z], g); 
+write(STDOUT_FILENO, "\n", 1);   
+z++;
+}
+return 0;
 }
