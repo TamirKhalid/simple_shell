@@ -20,7 +20,7 @@ void read_in(char *user_in, size_t size);
 void exe_command(const char *user_in);
 char *path_h(char **arg_value, char *user_in);
 void exit_h(char *user_in);
-void env_p();
+int env_p();
 char *_strcpy(char *des, char *sr);
 int _strlen(char *str);
 char *_strcat(char *des, char *sr);
