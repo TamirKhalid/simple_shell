@@ -10,11 +10,11 @@ int main(void) {
 		display_prompt();
 		line = read_line();
 		if (!line)
-			break;
-		if (strcmp(line, "env\n") == 0) {
-			print_env();
-			free(line);
-			continue;
+	break;
+	if (strcmp(line, "env\n") == 0) {
+	print_env();
+	free(line);
+	continue;
 		}
 		status = execute(line);
 		free(line);
