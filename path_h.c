@@ -7,7 +7,7 @@
  * Return: Execution Command
  */
 
-char path_h(char **rgu, char *cm)
+char *path_h(char **rgu, char *cm)
 {
 char *p;
 p = malloc(_strln("/bin/") + _strln(cm) + 1);
