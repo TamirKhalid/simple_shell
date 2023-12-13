@@ -8,6 +8,10 @@
 #include <stdbool.h>
 #define MAX_C 10
 
+/*
+ * Shell Prototypes
+ */
+
 void dis_prompt(char **argu, char **envo, bool fg);
 int _strcom(char *t1, char *t2);
 char *_strct(char *des, char *sr);
