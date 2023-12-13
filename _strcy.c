@@ -1,7 +1,10 @@
 #include "shell.h"
 
-/**
- * 
+/*
+ *  _strcy: strings copy function
+ * @des: string destination
+ * @sr: sting source
+ * return: the value of the string
 */
 
 char *_strcy(char *des, char *sr)
