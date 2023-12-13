@@ -1,8 +1,10 @@
 #include "shell.h"
 
 /**
- *  * 
- *   */
+ * exit_h: exit program function
+ * @cm: user input 
+ * Return: Nothing. 
+ */
 
 void exit_h(char *cm)
 {
