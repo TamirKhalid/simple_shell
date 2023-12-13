@@ -1,7 +1,10 @@
 #include "shell.h"
 
 /**
- * 
+ * _strct: appending function
+ * @des: destination argument
+ * @sr: source argument
+ * return: appended string
  */
 
 char *_strct(char *des, char *sr)
