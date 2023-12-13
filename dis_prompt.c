@@ -1,7 +1,10 @@
 #include "shell.h"
 
 /**
- * 
+ * dis_prompt:  display prompt
+ * @argu: user argument
+ * @ @envo: enviremental argument
+ * @fg: flag argument 
  */
 
 void dis_prompt(char **argu, char **envo, bool fg)
