@@ -1,8 +1,12 @@
 #include "shell.h"
 
 /**
- *  * 
- *   */
+ * main: Main function of the program
+ * @argc: Length argument 
+ * @envo: Enviromental argument
+ * @argu: User Argument
+ * Renturn: 0
+ */
 
 int main(int argc, char **argu, char **envo)
 {
