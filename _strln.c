@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- *  * _strln - length of a string
- *   * @s: string
- *    * Return: length
- *     */
+ * strln: function to get the length of a string
+ * @str: The string
+ * Return: String Lenght
+ */
 
 int _strln(char *str)
 {
