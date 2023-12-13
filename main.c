@@ -15,9 +15,9 @@ int main(void) {
 	print_env();
 	free(line);
 	continue;
-		}
-		status = execute(line);
-		free(line);
+	}
+	status = execute(line);
+	free(line);
 	}
 	return 0;
 }
