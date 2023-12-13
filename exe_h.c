@@ -1,6 +1,9 @@
 #include "shell.h"
 /**
- *
+ * exe_h: execution function
+ * @rgu : argument
+ * @argu: argument
+ * @envo: enviromental argument
  */
 
 void exe_h(char **rgu, char **argu, char **envo)
