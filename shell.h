@@ -19,5 +19,6 @@ char *search_command(char *cmd, char *path);
 int execute(char *line);
 void print_env(void);
 char *read_line(void);
-
+int _strcmp(char *stri, char *strii);
+int _strlen(char *str);
 #endif /* SHELL_H */

@@ -11,7 +11,7 @@ int main(void) {
 		line = read_line();
 		if (!line)
 	break;
-	if (strcmp(line, "env\n") == 0) {
+	if (_strcmp(line, "env\n") == 0) {
 	print_env();
 	free(line);
 	continue;

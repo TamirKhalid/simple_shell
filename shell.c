@@ -3,7 +3,7 @@
 /* Function to get error message based on error number */
 char *get_error_message(int errnum) {
 	    switch (errnum) {
-		            case EACCES:
+	   	    case EACCES:
 				                return "Permission denied";
 						        case ENOENT:
 						            return "No such file or directory";
@@ -48,35 +48,35 @@ int execute(char *line) {
 					    token = strtok(NULL, " ");
 					        }
 				        args[arg_count] = NULL;
-					if (strcmp(args[0], "exit") == 0) {
+					if (_strcmp(args[0], "exit") == 0) {
 						return 0; 
-					} else if (strcmp(args[0], "env") == 0) {
+					} else if (_strcmp(args[0], "env") == 0) {
 						print_env(); 
 						return 1;
 					}
 					path = get_env_path();
 					    cmd_path = search_command(args[0], path);
 					    if (!cmd_path) {
-						            char error_msg[200];
-							            snprintf(error_msg, sizeof(error_msg), "%s: command not found\n", args[0]);
-								            write(STDERR_FILENO, error_msg, strlen(error_msg));
-									    free(path);
-									    return 1;
-									        }
-					    pid = fork();
-					        if (pid == 0) {
-							        if (execve(cmd_path, args, NULL) == -1) {
-									char error_msg[200];
-									            snprintf(error_msg, sizeof(error_msg), "%s: %s\n", args[0], get_error_message(errno));
-										                write(STDERR_FILENO, error_msg, strlen(error_msg));
-												exit(EXIT_FAILURE);
-												        }
-								    } else if (pid < 0) {
-									            perror("Error");
-										        } else {
-												wait(NULL);
-												    }
-						free(path);
-						    free(cmd_path);
-						        return 1;
+			       char error_msg[200];
+	            snprintf(error_msg, sizeof(error_msg), "%s: command not found\n", args[0]);
+	            write(STDERR_FILENO, error_msg, _strlen(error_msg));
+		    free(path);
+		    return 1;
+					        }
+				    pid = fork();
+		       if (pid == 0) {
+	       if (execve(cmd_path, args, NULL) == -1) {
+	char error_msg[200];
+	          snprintf(error_msg, sizeof(error_msg), "%s: %s\n", args[0], get_error_message(errno));
+                write(STDERR_FILENO, error_msg, _strlen(error_msg));
+			exit(EXIT_FAILURE);
+				        }
+			    } else if (pid < 0) {
+			           perror("Error");
+			        } else {
+				wait(NULL);
+				    }
+	free(path);
+  free(cmd_path);
+	       return 1;
 }
