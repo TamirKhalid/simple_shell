@@ -23,4 +23,4 @@ char *read_l(void);
 int _strcmp(char *stri, char *strii);
 int _strlen(char *str);
 
-#endif /* SHELL_H */
+#endif  /* SHELL_H */
