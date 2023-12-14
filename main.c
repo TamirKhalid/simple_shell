@@ -1,23 +1,23 @@
 #include "shell.h"
 /*
- * * main: function
- * */
-
+ * main: Main function to run shell
+ * Return: 0 when success
+ */
 int main(void) {
-	char *line;
-	int status = 1;
-	while (status) {
-		display_prompt();
-		line = read_line();
-		if (!line)
-	break;
-	if (_strcmp(line, "env\n") == 0) {
-	print_env();
-	free(line);
-	continue;
-	}
-	status = execute(line);
-	free(line);
-	}
-	return 0;
+char *line;
+int st = 1;
+while (st) {
+dis_prompt();
+line = read_l();
+if (!line)
+break;
+if (_strcmp(line, "env\n") == 0) {
+p_env();
+free(line);
+continue;
+}
+st = exe_h(line);
+free(line);
+}
+return 0;
 }
