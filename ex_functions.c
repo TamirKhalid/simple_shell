@@ -33,5 +33,5 @@ return (0);
  */
 int interactive(info_t *stino)
 {
-return (isatty(STDIN_FILENO) && stino->readfd <= 2);
+return (isatty(STDIN_FILENO) && stino->readfd <= 2);
 }

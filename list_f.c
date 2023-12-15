@@ -133,5 +133,5 @@ str = _strcpy(str, node->str);
 strs[i] = str;
 }
 strs[i] = NULL;
-return (strs);
+return (strs);
 }
