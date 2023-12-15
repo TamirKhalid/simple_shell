@@ -47,8 +47,8 @@ int find_builtin(info_t *stino)
 {
 int x, built_in_ret = -1;
 builtin_table bt_table[] = {
-{"exit", _exit_m},
-{"env", _env_p},
+{"exit", exit_m},
+{"env", env_p},
 {"setenv", _mysetenv},
 {"unsetenv", _myunsetenv},
 {NULL, NULL}

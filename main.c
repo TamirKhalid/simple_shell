@@ -1,27 +1,22 @@
 #include "shell.h"
+
 /**
  * main - Main Function 
  * @ac: counter argument 
  * @av: vector argument 
  * Return: success 0, error 1
  */
-int main(int ac, char **av)
-{
+
+int main(int ac, char **av) {
 info_t stino[] = {INFO_INIT};
 int fd = 2;
-asm ("mov %1, %0\n\t"
-"add $3, %0"
-: "=z" (fd)
-: "z" (fd));
-if (ac == 2)
-{
+fd = fd + 3;
+if (ac == 2) {
 fd = open(av[1], O_RDONLY);
-if (fd == -1)
-{
+if (fd == -1) {
 if (errno == EACCES)
 exit(126);
-if (errno == ENOENT)
-{
+if (errno == ENOENT) {
 _mputs(av[0]);
 _mputs(": 0: Can't open ");
 _mputs(av[1]);
