@@ -12,7 +12,7 @@ int main_l(info_t *stino, char **av)
 ssize_t z = 0;
 int builtin_ret = 0;
 int exited = 0;
-void (av);
+(void)av;
 while (!exited && (z != -1 && builtin_ret != -2))
 {
 clear_info(stino);
