@@ -44,7 +44,7 @@ i = 0;
 }
 if (c != BUF_FLUSH)
 buf[i++] = c;
-return (1);
+return (1);
 }
 
 /**
@@ -58,7 +58,7 @@ char *starts_with(const char *haystack, const char *needle)
 while (*needle)
 if (*needle++ != *haystack++)
 return (NULL);
-return ((char *)haystack);
+return ((char *)haystack);
 }
 /**
  * is_delim - Function that checks character is delimeter or not 
@@ -71,5 +71,5 @@ int is_delim(char c, char *delim)
 while (*delim)
 if (*delim++ == c)
 return (1);
-return (0);
+return (0);
 }
