@@ -26,3 +26,12 @@ if (*delim++ == c)
 return (1);
 return (0);
 }
+/**
+ * interactive - Function that returns when if shell is in interactive mode
+ * @stino: Struct Info
+ * Return: interactive mode 1, else 0
+ */
+int interactive(info_t *stino)
+{
+return (isatty(STDIN_FILENO) && stino->readfd <= 2);
+}
