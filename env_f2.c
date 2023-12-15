@@ -78,3 +78,41 @@ free(buf);
 stino->env_changed = 1;
 return (0);
 }
+
+/**
+ * _strdup - duplicates a string
+ *  @str: the string to duplicate
+ *  Return: pointer to the duplicated string
+ */
+
+char *_strdup(const char *str)
+{
+int length = 0;
+char *ret;
+if (str == NULL)
+return (NULL);
+while (*str++)
+length++;
+ret = malloc(sizeof(char) * (length + 1));
+if (!ret)
+return (NULL);
+for (length++; length--;)
+ret[length] = *--str;
+return (ret);
+}
+
+/**
+ *  populate_env_list - populates enviroment linked list
+ *  @info: Structure containing potential arguments
+ *  Return: Always 0
+ */
+
+int populate_env_list(info_t *info)
+{
+list_t *node = NULL;
+size_t i;
+for (i = 0; environ[i]; i++)
+add_node_end(&node, environ[i], 0);
+info->env = node;
+return (0);
+}
