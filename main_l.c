@@ -116,7 +116,7 @@ return;
 }
 if (child_pid == 0)
 {
-if (execve(stino->path, stino->argv, get_environ(stino)) == -1)
+if (execve(stino->path, stino->argv, ret_environ(stino)) == -1)
 {
 free_info(stino, 1);
 if (errno == EACCES)
