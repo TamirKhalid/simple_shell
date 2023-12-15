@@ -1,19 +1,5 @@
 #include "shell.h"
-/*
-* print_ls - Function that prints String Elements
-*/
-size_t print_ls(const list_t *h)
-{
-size_t x = 0;
-while (h)
-{
-_puts(h->str ? h->str : "(nil)");
-_puts("\n");
-h = h->next;
-x++;
-}
-return (x);
-}
+
 /*
 * _puts - Function that print input string 
 */

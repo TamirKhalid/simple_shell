@@ -92,7 +92,7 @@ int (*func)(info_t *);
 
 
 
-int main_l(info_t *, char **);
+int main_l(info_t *);
 int find_builtin(info_t *);
 void srch_cmd(info_t *);
 void fork_cmd(info_t *);
