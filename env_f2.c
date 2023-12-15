@@ -102,12 +102,12 @@ return (ret);
 }
 
 /**
- *  populate_env_list - populates enviroment linked list
+ *  pop_env_list - populates enviroment linked list
  *  @info: Structure containing potential arguments
  *  Return: Always 0
  */
 
-int populate_env_list(info_t *info)
+int pop_env_list(info_t *info)
 {
 list_t *node = NULL;
 size_t i;
