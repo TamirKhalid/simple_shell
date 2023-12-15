@@ -57,7 +57,7 @@ for (x = 0; bt_table[x].type; x++)
 if (_strcmp(stino->argv[0], bt_table[x].type) == 0)
 {
 stino->line_count++;
-built_in_ret = tb_table[x].func(stino);
+built_in_ret = bt_table[x].func(stino);
 break;
 }
 return (built_in_ret);
@@ -96,7 +96,7 @@ fork_cmd(stino);
 else if (*(stino->arg) != '\n')
 {
 stino->status = 127;
-print_error(stino, "not found\n");
+error_p(stino, "not found\n");
 }
 }
 }
@@ -131,7 +131,7 @@ if (WIFEXITED(stino->status))
 {
 stino->status = WEXITSTATUS(stino->status);
 if (stino->status == 126)
-print_error(stino, "Permission denied\n");
+error_p(stino, "Permission denied\n");
 }
 }
 }
