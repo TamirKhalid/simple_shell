@@ -1,15 +1,18 @@
 #include "shell.h"
+
 /**
  * main_l - Shell Main Loop
  * @stino: Struct Info 
  * @av: Argument from main 
  * Return: Success 0, error 1
  */
+
 int main_l(info_t *stino, char **av)
 {
 ssize_t z = 0;
 int builtin_ret = 0;
-while (z != -1 && builtin_ret != -2)
+int exited = 0;
+while (!exited && (z != -1 && builtin_ret != -2))
 {
 clear_info(stino);
 if (interactive(stino))
@@ -18,26 +21,26 @@ _mputchar(BUF_FLUSH);
 z = get_input(stino);
 if (z != -1)
 {
-set_info(stino, av);
 builtin_ret = find_builtin(stino);
 if (builtin_ret == -1)
 srch_cmd(stino);
 }
 else if (interactive(stino))
 _putchar('\n');
-free_info(stino, 0);
+if (!interactive(stino) && (stino->status || builtin_ret == -2))
+exited = 1;
 }
-free_info(stino, 1);
-if (!interactive(stino) && stino->status)
-exit(stino->status);
-if (builtin_ret == -2)
-{
+if (!exited) {
+clear_info(stino);
+}
+if (!interactive(stino)) {
 if (stino->err_num == -1)
 exit(stino->status);
 exit(stino->err_num);
 }
 return (builtin_ret);
 }
+
 /**
  * find_builtin - Command Buildin find function 
  * @stino: struct info 
