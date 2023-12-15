@@ -7,7 +7,7 @@
  */
 int main(int ac, char **av)
 {
-info_t stino[] = { INFO_INIT };
+info_t stino[] = { NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, 0};
 int fd = 2;
 asm ("mov %1, %0\n\t"
 "add $3, %0"
