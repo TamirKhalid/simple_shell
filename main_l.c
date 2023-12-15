@@ -1,45 +1,48 @@
 #include "shell.h"
 
 /**
- * main_l - Shell Main Loop
- * @stino: Struct Info 
- * @av: Argument from main 
- * Return: Success 0, error 1
+ *  main_l - Shell Main Loop
+ *  @stino: Struct Info 
+ *  @av: Argument from main 
+ *  Return: Success 0, error 1
  */
 
-int main_l(info_t *stino, char **av)
-{
+int main_l(info_t *stino, char **av) {
 ssize_t z = 0;
 int builtin_ret = 0;
 int exited = 0;
 (void)av;
-while (!exited && (z != -1 && builtin_ret != -2))
-{
+char *line = NULL;
+size_t len = 0;
+while (!exited && (z != -1 && builtin_ret != -2)) {
 clear_info(stino);
 if (interactive(stino))
 _puts("$ ");
 _mputchar(BUF_FLUSH);
-z = get_input(stino);
-if (z != -1)
-{
+if (getline(&line, &len, stdin) != -1) {
+z = len;
+stino->arg = line;
 builtin_ret = find_builtin(stino);
 if (builtin_ret == -1)
 srch_cmd(stino);
+} else {
+z = -1;
 }
-else if (interactive(stino))
+if (z != -1 && interactive(stino))
 _putchar('\n');
 if (!interactive(stino) && (stino->status || builtin_ret == -2))
 exited = 1;
 }
-if (!exited) {
+free(line); 
+line = NULL;
+if (!exited)
 clear_info(stino);
-}
 if (!interactive(stino)) {
 if (stino->err_num == -1)
 exit(stino->status);
 exit(stino->err_num);
 }
-return (builtin_ret);
+return builtin_ret;
 }
 
 /**
