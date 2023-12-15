@@ -12,7 +12,7 @@ _puts("\n");
 h = h->next;
 x++;
 }
-return (x);
+return (x);
 }
 /*
 * _puts - Function that print input string 
