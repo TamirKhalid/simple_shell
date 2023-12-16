@@ -35,3 +35,15 @@ int interactive(info_t *stino)
 {
 return (isatty(STDIN_FILENO) && stino->readfd <= 2);
 }
+/**
+ *  clear_info - initializes info_t struct
+ *  @info: struct address
+ */
+
+void clear_info(info_t *info)
+{
+info->arg = NULL;
+info->argv = NULL;
+info->path = NULL;
+info->argc = 0;
+}
